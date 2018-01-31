@@ -1,18 +1,8 @@
 import React from 'react'
 import './ButtonToolbar.css'
-import classNames from 'classnames'
+import { withClass } from './utils'
 
-// with castumizable `className` prop
-const withClass = (...classes) => {
-  return Component => {
-    return ({ className, ...props }) => {
-      const c = classNames(...classes, className)
-      return <Component className={c} {...props} />
-    }
-  }
-}
-
-const ButtonToolbar = withClass('uix', 'button-toolbar')(props => {
+const ButtonToolbar = withClass('button-toolbar')(props => {
   const { children, className, ...childProps } = props
   return (
     <div className={className}>
