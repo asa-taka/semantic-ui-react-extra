@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@storybook/react": "^3.3.11",
+    "@storybook/storybook-deployer": "^2.2.0",
     "gh-pages": "^1.1.0",
     "lint-staged": "^6.1.0",
     "prettier": "^1.10.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0"
+    "react-scripts": "1.1.0",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.77.2",
+    "storybook": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -16,9 +21,10 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "precommit": "lint-staged",
-    "prettier": "prettier '**/*.js'"
+    "prettier": "prettier '**/*.js'",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "deploy": "storybook-to-ghpages"
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
@@ -26,5 +32,5 @@
       "git add"
     ]
   },
-  "homepage": "https://asa-taka.github.io/xxxx-SET-REPO-HERE-xxxx/"
+  "homepage": "https://github.com/asa-taka/semantic-ui-react-extra"
 }

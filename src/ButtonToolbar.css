@@ -1,0 +1,12 @@
+.uix.button-toolbar > .button-toolbar-container {
+  margin: -0.25em;
+}
+
+.uix.button-toolbar > .ui.buttons {
+  font-size: 1em;
+}
+
+.uix.button-toolbar > .button-toolbar-container > .ui.button,
+.uix.button-toolbar > .button-toolbar-container > .ui.buttons {
+  margin: 0.25em;
+}
